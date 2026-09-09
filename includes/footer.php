@@ -102,9 +102,9 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
     </button>
 
-    <!-- Scripts da Aplicação -->
-    <script src="/js/main.js" defer></script>
-    <script src="/js/triage.js" defer></script>
+    <!-- Scripts da Aplicação com Cache Busting Automático -->
+    <script src="<?= asset_version('/js/main.js') ?>" defer></script>
+    <script src="<?= asset_version('/js/triage.js') ?>" defer></script>
 
 </body>
 </html>

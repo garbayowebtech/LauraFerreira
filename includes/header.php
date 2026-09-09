@@ -9,6 +9,16 @@ $pageDescription = $pageDescription ?? "Especialista em Direito Médico e da Sa�
 $pageKeywords = $pageKeywords ?? "direito médico, direito da saúde, advogada direito médico rio de janeiro, liminar plano de saúde, negativa cirurgia, medicamento alto custo SUS, erro médico indenização, autismo método ABA plano, Dra Laura Ferreira";
 $canonicalUrl = $canonicalUrl ?? "https://lauraferreira.adv.br" . ($_SERVER['REQUEST_URI'] ?? '');
 $ogImage = $ogImage ?? "https://lauraferreira.adv.br/assets/logo_1.png";
+
+if (!function_exists('asset_version')) {
+    function asset_version($relPath) {
+        $filePath = dirname(__DIR__) . $relPath;
+        if (file_exists($filePath)) {
+            return $relPath . '?v=' . filemtime($filePath);
+        }
+        return $relPath . '?v=' . time();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR" prefix="og: https://ogp.me/ns#">
@@ -48,10 +58,10 @@ $ogImage = $ogImage ?? "https://lauraferreira.adv.br/assets/logo_1.png";
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Estilos Estruturais -->
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <!-- Estilos Estruturais com Cache Busting Automático -->
+    <link rel="stylesheet" href="<?= asset_version('/css/variables.css') ?>">
+    <link rel="stylesheet" href="<?= asset_version('/css/global.css') ?>">
+    <link rel="stylesheet" href="<?= asset_version('/css/main.css') ?>">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/assets/logo_1.png">
