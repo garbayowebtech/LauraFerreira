@@ -75,4 +75,12 @@ echo '<?xml version="1.0" encoding="UTF-8"?>' . "\n";
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
+
+    <!-- Página Institucional: Política de Cookies & Privacidade -->
+    <url>
+        <loc><?= $baseUrl ?>/politica-de-cookies</loc>
+        <lastmod><?= $today ?></lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>

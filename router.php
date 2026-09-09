@@ -32,7 +32,12 @@ $routes = [
     '/artigos/cirurgia-urgente-sem-especialista' => '/artigos/cirurgia-urgente-sem-especialista.php',
     '/artigos/plano-negou-cirurgia' => '/artigos/plano-negou-cirurgia.php',
     '/artigos/medicamentos-alto-custo' => '/artigos/medicamentos-alto-custo.php',
-    '/artigos/reajuste-faixa-etaria' => '/artigos/reajuste-faixa-etaria.php'
+    '/artigos/reajuste-faixa-etaria' => '/artigos/reajuste-faixa-etaria.php',
+    '/politica-de-cookies' => '/politica-de-cookies.php',
+    '/politica-de-cookies/' => '/politica-de-cookies.php',
+    '/politica-de-privacidade' => '/politica-de-cookies.php',
+    '/cookies' => '/politica-de-cookies.php',
+    '/privacidade' => '/politica-de-cookies.php'
 ];
 
 if (isset($routes[$uri])) {

@@ -178,6 +178,13 @@ ul, ol {
     backdrop-filter: blur(8px);
 }
 
+.badge-gold {
+    background-color: rgba(245, 197, 24, 0.16);
+    color: #FDE68A;
+    border: 1px solid rgba(253, 230, 138, 0.45);
+    backdrop-filter: blur(8px);
+}
+
 .badge-pulse {
     position: relative;
 }

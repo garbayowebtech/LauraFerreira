@@ -44,6 +44,7 @@
                         <li><a href="/#como-funciona" class="footer-link">Etapas do Atendimento</a></li>
                         <li><a href="/#faq" class="footer-link">Perguntas Frequentes</a></li>
                         <li><a href="/#artigos" class="footer-link">Artigos e Guias</a></li>
+                        <li><a href="/politica-de-cookies" class="footer-link">Política de Cookies & LGPD</a></li>
                     </ul>
                 </div>
 
@@ -81,6 +82,7 @@
                         &copy; <?= date('Y') ?> Dra. Laura Ferreira Advocacia. Todos os direitos reservados.
                     </div>
                     <div style="display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap;">
+                        <a href="/politica-de-cookies" style="color: var(--color-ivory); text-decoration: underline; text-underline-offset: 3px; font-size: 0.85rem;">Política de Cookies & Privacidade</a>
                         <span>Direito Médico e da Saúde</span>
                         <span>Rio de Janeiro - Brasil</span>
                         <span class="footer-credit">Desenvolvido por <a href="https://garbayowebtech.com" target="_blank" rel="noopener noreferrer" style="color: var(--color-ivory); text-decoration: underline; text-underline-offset: 3px;">garbayowebtech.com</a></span>
@@ -105,6 +107,7 @@
     <!-- Scripts da Aplicação com Cache Busting Automático -->
     <script src="<?= asset_version('/js/main.js') ?>" defer></script>
     <script src="<?= asset_version('/js/triage.js') ?>" defer></script>
+    <script src="<?= asset_version('/js/cookies.js') ?>" defer></script>
 
 </body>
 </html>

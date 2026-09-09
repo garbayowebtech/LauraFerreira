@@ -14,6 +14,10 @@
     RewriteRule ^artigos/medicamentos-alto-custo/?$ artigos/medicamentos-alto-custo.php [L]
     RewriteRule ^artigos/reajuste-faixa-etaria/?$ artigos/reajuste-faixa-etaria.php [L]
 
+    # URLs Institucionais
+    RewriteRule ^politica-de-cookies/?$ politica-de-cookies.php [L]
+    RewriteRule ^politica-de-privacidade/?$ politica-de-cookies.php [L]
+
     # Forçar HTTPS em produção caso habilitado
     # RewriteCond %{HTTPS} off
     # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
