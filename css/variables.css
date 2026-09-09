@@ -1,0 +1,78 @@
+/* ==============================================================================
+   DRA. LAURA FERREIRA | DIREITO MÉDICO E DA SAÚDE
+   Design System Tokens & CSS Variables
+   ============================================================================== */
+
+:root {
+    /* Paleta Oficial do Projeto */
+    --color-terracotta: #A55738;
+    --color-terracotta-hover: #8E482C;
+    --color-terracotta-light: #F7EEE9;
+    --color-terracotta-glow: rgba(165, 87, 56, 0.25);
+    
+    --color-slate: #373F51;
+    --color-slate-dark: #242A37;
+    --color-slate-light: #EBF0F5;
+    --color-slate-glow: rgba(55, 63, 81, 0.2);
+
+    --color-ivory: #EAE0D5;
+    --color-ivory-light: #F6F2EC;
+    --color-ivory-dark: #D8CCC0;
+
+    --color-charcoal: #1B1B1E;
+    --color-charcoal-soft: #2D2D32;
+    --color-muted: #6B7280;
+    --color-muted-light: #9CA3AF;
+
+    --color-bg-main: #FDFBF7;
+    --color-bg-alt: #F7F4EE;
+    --color-white: #FFFFFF;
+
+    /* Destaques Especiais */
+    --color-whatsapp: #25D366;
+    --color-whatsapp-hover: #1DA851;
+    --color-whatsapp-glow: rgba(37, 211, 102, 0.35);
+    --color-gold: #C5A059;
+    --color-success: #10B981;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+
+    /* Tipografia */
+    --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+    /* Escalas de Espaçamento */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+    --spacing-3xl: 4.5rem;
+    --spacing-4xl: 6rem;
+
+    /* Sombras & Profundidade */
+    --shadow-subtle: 0 2px 8px rgba(27, 27, 30, 0.04);
+    --shadow-card: 0 10px 30px -10px rgba(55, 63, 81, 0.08);
+    --shadow-hover: 0 20px 40px -15px rgba(165, 87, 56, 0.16);
+    --shadow-elevated: 0 25px 50px -12px rgba(27, 27, 30, 0.18);
+    --shadow-glow: 0 0 25px var(--color-terracotta-glow);
+
+    /* Raios de Borda */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 9999px;
+
+    /* Transições */
+    --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Layout & Breakpoints */
+    --container-max-width: 1280px;
+    --container-padding: 1.5rem;
+    --header-height: 88px;
+}

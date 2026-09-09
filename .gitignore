@@ -1,0 +1,41 @@
+# ==============================================================================
+# Git Ignore - Dra. Laura Ferreira Advocacia
+# ==============================================================================
+
+# Dependências e Ambiente
+.env
+.env.*
+node_modules/
+vendor/
+
+# Dados de Leads e Privacidade (LGPD)
+data/*.json
+!data/.gitkeep
+*.log
+
+# Arquivos do Sistema Operacional
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Arquivos Temporários de Edição / Scratch
+*.tmp
+*.bak
+*.swp
+*~
+scratch_test.html
+all_scraped_articles.json
+scraped_articles.json
+snippet*.txt
+
+# IDEs e Editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.project
+.settings/

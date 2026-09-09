@@ -1,0 +1,7 @@
+# Robots.txt - Dra. Laura Ferreira Advocacia
+User-agent: *
+Allow: /
+Disallow: /data/
+Disallow: /includes/
+
+Sitemap: https://lauraferreira.adv.br/sitemap.xml

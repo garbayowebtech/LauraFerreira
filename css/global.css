@@ -1,0 +1,347 @@
+/* ==============================================================================
+   DRA. LAURA FERREIRA | DIREITO MÉDICO E DA SAÚDE
+   Global Reset, Typography, Base Elements & Utilities
+   ============================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-charcoal);
+    background-color: var(--color-bg-main);
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tipografia Estrutural */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-slate-dark);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 4vw + 1rem, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(1.85rem, 3vw + 0.5rem, 2.75rem);
+    margin-bottom: var(--spacing-md);
+}
+
+h3 {
+    font-size: clamp(1.25rem, 1.8vw + 0.3rem, 1.65rem);
+}
+
+h4 {
+    font-size: 1.15rem;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-charcoal-soft);
+}
+
+p.lead {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #4B5563;
+}
+
+a {
+    color: var(--color-terracotta);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-terracotta-hover);
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Container Responsivo */
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+}
+
+.container-narrow {
+    max-width: 860px;
+}
+
+/* Seções Padrão */
+.section {
+    padding-top: var(--spacing-4xl);
+    padding-bottom: var(--spacing-4xl);
+    position: relative;
+    overflow: hidden;
+}
+
+.section-alt {
+    background-color: var(--color-bg-alt);
+}
+
+.section-slate {
+    background-color: var(--color-slate);
+    color: var(--color-ivory-light);
+}
+
+.section-slate h2,
+.section-slate h3,
+.section-slate h4 {
+    color: var(--color-white);
+}
+
+.section-slate p {
+    color: var(--color-ivory);
+}
+
+/* Cabeçalho de Seção */
+.section-header {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto var(--spacing-3xl) auto;
+}
+
+.section-header .section-tag {
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: #5A6270;
+}
+
+/* Badges e Tags */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 1rem;
+    border-radius: var(--radius-full);
+    font-size: 0.825rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.badge-terracotta {
+    background-color: var(--color-terracotta-light);
+    color: var(--color-terracotta);
+    border: 1px solid rgba(165, 87, 56, 0.2);
+}
+
+.badge-slate {
+    background-color: var(--color-slate-light);
+    color: var(--color-slate);
+    border: 1px solid rgba(55, 63, 81, 0.15);
+}
+
+.badge-ivory {
+    background-color: rgba(234, 224, 213, 0.25);
+    color: var(--color-ivory);
+    border: 1px solid rgba(234, 224, 213, 0.3);
+    backdrop-filter: blur(8px);
+}
+
+.badge-pulse {
+    position: relative;
+}
+
+.badge-pulse::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: currentColor;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+    0% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(165, 87, 56, 0.7); }
+    70% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 0 6px rgba(165, 87, 56, 0); }
+    100% { transform: scale(0.95); opacity: 0.8; box-shadow: 0 0 0 0 rgba(165, 87, 56, 0); }
+}
+
+/* Botões Modernos e de Alta Conversão */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    font-family: var(--font-sans);
+    font-size: 0.975rem;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: var(--radius-full);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    line-height: 1.2;
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-terracotta) 0%, #C46B47 100%);
+    color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(165, 87, 56, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-terracotta-hover) 0%, var(--color-terracotta) 100%);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(165, 87, 56, 0.4);
+}
+
+.btn-secondary {
+    background: var(--color-slate);
+    color: var(--color-white);
+    box-shadow: 0 4px 15px rgba(55, 63, 81, 0.2);
+}
+
+.btn-secondary:hover {
+    background: var(--color-slate-dark);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(55, 63, 81, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-slate);
+    border: 1.5px solid var(--color-slate);
+}
+
+.btn-outline:hover {
+    background: var(--color-slate);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.btn-outline-white {
+    background: transparent;
+    color: var(--color-white);
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(6px);
+}
+
+.btn-outline-white:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-white);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #20BA5A 100%);
+    color: var(--color-white);
+    box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #20BA5A 0%, #169E4A 100%);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+}
+
+.btn-lg {
+    padding: 1.05rem 2.25rem;
+    font-size: 1.05rem;
+}
+
+.btn-sm {
+    padding: 0.55rem 1.15rem;
+    font-size: 0.85rem;
+}
+
+.btn-icon-right svg {
+    transition: transform var(--transition-fast);
+}
+
+.btn-icon-right:hover svg {
+    transform: translateX(4px);
+}
+
+/* Destaque sutil com gradiente nos títulos */
+.text-terracotta {
+    color: var(--color-terracotta);
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--color-terracotta) 0%, #D4805A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-ivory {
+    background: linear-gradient(135deg, #FFFFFF 0%, var(--color-ivory) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Foco Acessível */
+:focus-visible {
+    outline: 2px solid var(--color-terracotta);
+    outline-offset: 3px;
+}
+
+/* Animações de Entrada (Reveal on Scroll - Transição Mais Lenta e Elegante) */
+.reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 1.15s cubic-bezier(0.22, 1, 0.36, 1), transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.15s; }
+.reveal-delay-2 { transition-delay: 0.3s; }
+.reveal-delay-3 { transition-delay: 0.45s; }
