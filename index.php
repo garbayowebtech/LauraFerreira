@@ -733,7 +733,9 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Conteúdo Textual & Pilares -->
             <div class="about-content reveal">
-                <span class="badge badge-slate section-tag">Conheça a Advogada</span>
+                <div class="about-badge-wrapper">
+                    <span class="badge badge-slate section-tag">Conheça a Advogada</span>
+                </div>
                 <h2>Dra. Laura Ferreira</h2>
                 <h3 style="font-size: 1.15rem; color: var(--color-terracotta); margin-bottom: 1.25rem;">
                     Vocação, Rigor Técnico e Dedicação Integral à Vida e ao Direito da Saúde
@@ -1422,7 +1424,7 @@ require_once __DIR__ . '/includes/header.php';
                         <input type="text" id="formName" name="name" class="form-control" placeholder="Ex: Maria Silva" required>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-row-phone-email">
                         <div class="form-group">
                             <label for="formPhone" class="form-label">WhatsApp com DDD *</label>
                             <input type="tel" id="formPhone" name="phone" class="form-control" placeholder="Ex: (21) 99999-9999" required>
